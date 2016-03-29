@@ -1,2 +1,6 @@
-mysite/mysite/__pycache__/
-mysite/blog/__pycache__/
+*.pyc
+__pycache__
+myvenv
+db.qlite3
+/static
+.DS_Store
