@@ -1,11 +1,14 @@
 {% extends 'blog/base.html' %}
 {% block content %}
     {% for post in posts %}
-        <article class="post">
-        <time>published:{{ post.published_date  }}</time>
-        <h2><a href=" {% url 'post_detail' pk=post.pk %} ">{{ post.title }}</a></h2>
-        <p> {{ post.text|linebreaksbr }}</p>
-        </article>
+        <div class="post">
+        <div class="date">
+            <time>published:{{ post.published_date  }}</time>
+        </div>
+        <h1><a href=" {% url 'post_detail' pk=post.pk %} ">{{ post.title }}</a></h1>
+        <p> {{ post.text|linebreaksbr }}</p>   
+        <a href="{% url 'post_detail' pk=post.pk %}"> Comments: {{ post.comments.count  }} </a>
+        </div>
     {% endfor %}
 {% endblock %}
 

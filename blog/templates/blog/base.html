@@ -19,7 +19,7 @@
                     <p class="top-menu"> Hello {{ user.username  }} <small> (<a href="{% url 'logout' %}">Log out</a>) </small></p>
                 {% else %}
                    <a href="{% url 'login' %}" class="top-menu">
-                       {% include './icons/lock.svg' %} 
+                       {% include './icons/power.svg' %} 
                     </a>
 
                 {% endif %}
